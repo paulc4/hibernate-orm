@@ -118,6 +118,9 @@ dependencies {
     testRuntime( libraries.atomikos_jta )
     testRuntime( libraries.wildfly_transaction_client )
 
+    testRuntime( "com.nuodb.hibernate:nuodb-hibernate:3.3.0-hib5" )
+    testRuntime( "com.nuodb.jdbc:nuodb-jdbc:3.3.0" )
+
     testAnnotationProcessor( project( ':hibernate-jpamodelgen' ) )
 
     testCompile libraries.shrinkwrap_descriptors_api_javaee
@@ -129,6 +132,7 @@ dependencies {
     // Additional tests requiring Javassist
     // folder in src/javassist/java
     testJavassistCompile libraries.javassist
+    testCompile "com.nuodb.hibernate:nuodb-hibernate:3.3.0-hib5"
 }
 
 jar {
